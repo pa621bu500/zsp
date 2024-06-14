@@ -1,0 +1,23 @@
+src/main/resources/static/ZSP_Template_Billing.xls
+src/main/resources/static/ZSP_Template_Billing_Int.xls
+src/main/resources/output
+475
+14
+24
+0.07
+07:00:00
+23:00:01
+
+
+***********************Comment******************************
+
+
+1st line:	Template 1 file location
+2nd line:	Template 2 file location
+3rd line:	Generated file location and the file name
+4th line:	Contracted Capacity Charges
+5th line:	Billing Due Date
+6th line:	The date where payment may be excluded
+7th line:	gst rate
+8th line:	start peak time
+9th line:	end peak time
