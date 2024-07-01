@@ -27,6 +27,7 @@
 			<url>https://repository.aspose.com/repo/</url>
 		</repository>
 	</repositories>
+
 	<dependencies>
 		<dependency>
 			<groupId>org.pabuff</groupId>
@@ -37,14 +38,21 @@
 		<dependency>
 			<groupId>org.pabuff</groupId>
 			<artifactId>evs2helper</artifactId>
-			<version>3.32.10</version>
+			<version>3.32.21</version>
 		</dependency>
+
 		<dependency>
 			<groupId>org.pabuff</groupId>
 			<artifactId>evs2dto</artifactId>
 			<version>1.27.8</version>
 		</dependency>
-		<!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
+
+		<dependency>
+			<groupId>org.postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+			<version>42.7.3</version>
+		</dependency>
+
 		<dependency>
 			<groupId>org.apache.poi</groupId>
 			<artifactId>poi</artifactId>
@@ -59,31 +67,15 @@
 		</dependency>
 
 		<dependency>
-			<groupId>com.fasterxml.jackson.core</groupId>
-			<artifactId>jackson-databind</artifactId>
-		</dependency>
-		<!-- https://mvnrepository.com/artifact/org.apache.httpcomponents.client5/httpclient5 -->
-		<dependency>
-			<groupId>org.apache.httpcomponents.client5</groupId>
-			<artifactId>httpclient5</artifactId>
-			<version>5.3.1</version>
-		</dependency>
-
-<!--		&lt;!&ndash; https://mvnrepository.com/artifact/org.jodconverter/jodconverter-core &ndash;&gt;-->
-<!--		<dependency>-->
-<!--			<groupId>org.jodconverter</groupId>-->
-<!--			<artifactId>jodconverter-core</artifactId>-->
-<!--			<version>4.4.7</version>-->
-<!--		</dependency>-->
-		<!-- https://mvnrepository.com/artifact/org.springframework/spring-test -->
-		<!-- https://mvnrepository.com/artifact/org.springframework/spring-test -->
-		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-test</artifactId>
 			<version>6.1.6</version>
 			<scope>test</scope>
 		</dependency>
-
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-mail</artifactId>
+		</dependency>
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -103,24 +95,7 @@
 			<artifactId>lombok</artifactId>
 			<optional>true</optional>
 		</dependency>
-		<!-- https://mvnrepository.com/artifact/org.postgresql/postgresql -->
-		<dependency>
-			<groupId>org.postgresql</groupId>
-			<artifactId>postgresql</artifactId>
-			<version>42.7.3</version>
-		</dependency>
-		<!-- https://mvnrepository.com/artifact/commons-fileupload/commons-fileupload -->
-		<dependency>
-			<groupId>commons-fileupload</groupId>
-			<artifactId>commons-fileupload</artifactId>
-			<version>1.4</version>
-		</dependency>
-		<!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
-		<dependency>
-			<groupId>commons-io</groupId>
-			<artifactId>commons-io</artifactId>
-			<version>2.16.1</version>
-		</dependency>
+
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>

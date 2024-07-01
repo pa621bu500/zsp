@@ -24,53 +24,21 @@ public class ZspApplication implements CommandLineRunner {
 	@Autowired
 	public MeterService meterService;
 
-	private static String startError = "";		// error message for start reading when retrieving the data
-	private static String endError = "";		// error message for end reading when retrieving the data
-	private static String paymentError = "";	// error message for payment when retrieving the data
-	private static String invoiceError = "";	// error message for invoice when retrieving the data
-
 	public static void main(String[] args) {
 		SpringApplication.run(ZspApplication.class, args);
 	}
+
 	@Override
 	public void run(String... args) throws Exception {
-		meterService.setDateTime();
+//		meterService.updateTenantTable();
+		meterService.setDateTime(2024,5);
 		meterService.getMeterData();
 		meterService.getTariffRate();
-		meterService.getStartAndEndMeterReading();
-		meterService.getPaymentChargeFromExcel();
-		meterService.generateHotelInvoices();
+		meterService.getMeterUsage();
+		meterService.getPaymentInfoFromTenantInvoice(); //after manual reading inserted into db, proceed to generate invoice
+		meterService.generateMissingDataReport();
 		meterService.generateNormalInvoices();
-	}
-
-	// messages shown in command prompt
-	private static void printInfo(){
-		if(startError.equals("")){
-			System.out.println("All start reading have successfully been retrieved!\n");
-		}
-		else{
-			System.out.println(startError + "\n");
-		}
-
-		if(endError.equals("")){
-			System.out.println("All end reading have successfully been retrieved!\n");
-		}
-		else{
-			System.out.println(endError + "\n");
-		}
-
-		if(paymentError.equals("")){
-			System.out.println("All payment have successfully been retrieved!\n");
-		}
-		else{
-			System.out.println(paymentError + "\n");
-		}
-
-		if(invoiceError.equals("")){
-			System.out.println("All invoice have successfully been retrieved!\n");
-		}
-		else{
-			System.out.println(invoiceError + "\n");
-		}
+		meterService.generateInvSummary();
+//		meterService.generateVVCReport();
 	}
 }

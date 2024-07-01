@@ -2,8 +2,10 @@ package com.pabu5h.zsp.config;
 
 import com.pabu5h.zsp.job.JobDto;
 import org.pabuff.evs2helper.email.EmailService;
+import org.pabuff.evs2helper.email.SystemNotifier;
 import org.pabuff.evs2helper.locale.LocalHelper;
 import org.pabuff.evs2helper.meter_usage.MeterUsageProcessor;
+import org.pabuff.evs2helper.report.ReportHelper;
 import org.pabuff.evs2helper.scope.ScopeHelper;
 import org.pabuff.oqghelper.OqgHelper;
 import org.pabuff.oqghelper.QueryHelper;
@@ -45,6 +47,16 @@ public class Evs2Config {
         return new JobDto();
     }
 
+    @Bean
+    public ReportHelper reportHelper() {
+        return new ReportHelper();
+    }
+
+//    @Bean
+//    public SystemNotifier systemNotifier() {
+//        return new SystemNotifier();
+//    }
+//
 //    @Bean
 //    public EmailService emailService() {
 //        return new EmailService();
@@ -54,6 +66,7 @@ public class Evs2Config {
 //    public JavaMailSender javaMailSender() {
 //        return new JavaMailSender();
 //    }
+
 
 
 }
